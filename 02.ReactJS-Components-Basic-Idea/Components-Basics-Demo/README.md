@@ -3,6 +3,14 @@
 
 # React + Vite
 
+Рun the following commands in Visual Studio Code, to create React + Vite App:
+
+1. npm create vite my-project -- -- template react
+2. cd my-project
+3. npm install
+4. npm run dev
+
+
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
 Currently, two official plugins are available:
