@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import './App.css'
+import style from './App.module.css'
 
 function App() {
     const [numbers, setNumbers] = useState([1, 2, 3, 4, 5]);
@@ -12,6 +12,10 @@ function App() {
         console.log(`Update Component - ${numbers.length}`)
     }, [numbers])
 
+    useEffect(() => {
+        setTimeout(() => setCount(s => s + 1), 1000)
+    }, [count])
+
     const onCLick = () => {
         setNumbers(oldstate => oldstate.slice(0, oldstate.length - 1));
     }
@@ -23,7 +27,15 @@ function App() {
     return (
         <div>
             <ul>
-                {numbers.map((number, index) => <li data-key={index} key={index}>{number * 2}</li>)}
+                {numbers.map((number, index) => 
+                    <li 
+                        data-key={index} 
+                        key={index}
+                        className={style.listItem}
+                    >
+                            {number * 2}
+                   </li>
+            )}
             </ul>
             <p>Count: {count}</p>
             <button onClick={onCLick}>Remove</button>
