@@ -1,19 +1,21 @@
 import { useState, useEffect } from 'react';
-import style from './App.module.css'
+import Starwars from './starWars';
+import styles from './App.module.css'
+
 
 function App() {
     const [numbers, setNumbers] = useState([1, 2, 3, 4, 5]);
     const [count, setCount] = useState(0);
     useEffect(() => {
-        console.log('mount component')
+        // console.log('mount component')
     }, []);
 
     useEffect(() => {
-        console.log(`Update Component - ${numbers.length}`)
+        // console.log(`Update Component - ${numbers.length}`)
     }, [numbers])
 
     useEffect(() => {
-        setTimeout(() => setCount(s => s + 1), 1000)
+        // setTimeout(() => setCount(s => s + 1), 1000)
     }, [count])
 
     const onCLick = () => {
@@ -25,13 +27,14 @@ function App() {
     }
 
     return (
-        <div>
+        <div className={styles.app}>
+            <Starwars />
             <ul>
                 {numbers.map((number, index) => 
                     <li 
                         data-key={index} 
                         key={index}
-                        className={style.listItem}
+                        className={styles.listItem}
                     >
                             {number * 2}
                    </li>
