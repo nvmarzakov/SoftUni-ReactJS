@@ -1,3 +1,4 @@
+import Footer from "./components/Footer"
 import Header from "./components/Header"
 
 
@@ -125,9 +126,7 @@ function App() {
             </main>
 
              {/* Footer  */}
-            <footer className="footer">
-                <p>Copyright © designed by Mihail Valkov</p>
-            </footer>
+            <Footer />
         </div>
     )
 }
