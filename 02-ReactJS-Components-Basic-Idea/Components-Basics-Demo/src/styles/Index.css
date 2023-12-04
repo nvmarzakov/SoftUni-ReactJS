@@ -1,0 +1,39 @@
+* {
+    padding: 0;
+    margin: 0;
+   
+}
+
+html {
+    font: 20px/1.5 Halvetica;
+   
+}
+
+body {
+    box-sizing: border-box;
+    max-width: 1200px;
+    padding: 2em;
+    margin: 0 auto;
+  
+}
+
+#root > div {
+    background: rgb(134, 160, 231);
+    border-radius: 1em;
+    padding: 1em 1em;
+}
+
+h1 {
+    text-align: center;
+    color: white;
+}
+
+.movie-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    color: white;
+    
+}
